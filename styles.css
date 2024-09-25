@@ -1,0 +1,99 @@
+body{
+    margin: 0 auto;
+    font-family: Verdana, Arial, Tahoma;
+}
+.container{
+    background-color: aliceblue;
+    width: 1190px;
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: 690px 20px;
+    margin: 0 auto;
+    grid-gap: 30px;
+    overflow: hidden;
+}
+header{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-rows: 45px 140px 460px 45px;
+    overflow: hidden;
+
+}
+.top-bar{
+    position: fixed;
+    width: 1190px;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+.top-bar > a, .top-bar > div{
+    text-decoration: none;
+    padding: 10px 20px;
+    align-self: center;
+}
+.top-bar > a:hover, .top-bar > div:hover{
+    background-color: aqua;
+}
+.top-bar > img{
+    width: 36px;
+    margin: 5px 13px;
+}
+.dropdown-btn{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    position: absolute;
+    background-color: antiquewhite;
+    width: 100%;
+    left: 0;
+    margin-top: 10px;
+    display: none;
+}
+.dropdown-content > a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.dropdown-content > a:hover{
+    background-color: aqua;
+}
+.top-bar > div:hover .dropdown-content{
+    display: block;
+}
+.mast-head{
+    background-color: red;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+}
+.mast-head :first-child{
+    height: 100px;
+    margin-left: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mast-head :nth-child(2){
+    height: 100px;
+    margin-right: 13px;
+}
+.banner{
+    background-color: yellowgreen;
+    grid-row: 3/4;
+    grid-column: 1/-1;
+}
+.auxiliary-menu{
+    background-color: yellow;
+    grid-row: 4/5;
+    grid-column: 1/-1;
+}
